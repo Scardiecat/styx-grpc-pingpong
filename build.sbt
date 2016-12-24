@@ -14,7 +14,7 @@ lazy val api = (project in file("api"))
 //
 // PingPong
 //
-lazy val service = (project in file("service"))
+lazy val service = (project in file("service")).dependsOn(api)
 
 
 
@@ -38,4 +38,4 @@ lazy val service = (project in file("service"))
 
 //Tests
 
-//concurrentRestrictions in Global += Tags.limit(Tags.Test, 1)
+concurrentRestrictions in Global += Tags.limit(Tags.Test, 1)

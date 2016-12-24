@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+//import "google/api/annotations.proto";
+
+package org.scardiecat.styxgrpctest.echoservice.v1;
+
+service EchoService {
+    rpc SendEcho (SendMessageRequest) returns (Message) {
+//        option (google.api.http) = {
+//      post: "/api/v1/echo"
+//    };
+    }
+}
+
+message SendMessageRequest {
+    string content = 1;
+}
+
+message Message {
+    string message_id = 1;
+    string sender_id = 2;
+    string content = 3;
+}
+
