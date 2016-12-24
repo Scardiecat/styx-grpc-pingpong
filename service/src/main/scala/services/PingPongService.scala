@@ -2,7 +2,7 @@ package org.scardiecat.styxgrpctest.services
 
 import java.util.UUID
 
-import org.scardiecat.styxgrpctest.pongservice.v1.{PongMessage, PongServiceGrpc, SendPingMessageRequest}
+import org.scardiecat.pongservice.v1.{PongMessage, PongServiceGrpc, SendPingMessageRequest}
 
 import scala.concurrent.Future
 

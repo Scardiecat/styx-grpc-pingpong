@@ -1,22 +1,22 @@
 package org.scardiecat.styxgrpctest.services
 
 import org.scardiecat.echo.BaseSpec
-import org.scardiecat.styxgrpctest.grpc.EchoClient
-import org.scardiecat.styxgrpctest.pongservice.v1.SendPingMessageRequest
+import org.scardiecat.pingpong.grpc.PingClient
+import org.scardiecat.pongservice.v1.SendPingMessageRequest
 
 /**
   * Created by ralfmueller on 2016-12-11.
   */
 class PingPongServiceTest extends BaseSpec {
-  val channel = EchoClient.buildChannel(8443)
-  val pongServiceStub = EchoClient.buildPongServiceStub(channel)
+  val channel = PingClient.buildChannel(8443)
+  val pongServiceStub = PingClient.buildPongServiceStub(channel)
 
   override def beforeAll(){
-    echoServer.start()
+    pongServer.start()
   }
 
   override def afterAll() {
-    echoServer.shutdown().awaitTermination()
+    pongServer.shutdown().awaitTermination()
   }
 
   describe("testSendPing") {

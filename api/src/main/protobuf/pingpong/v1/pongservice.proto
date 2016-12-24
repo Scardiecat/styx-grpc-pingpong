@@ -2,7 +2,7 @@ syntax = "proto3";
 option java_multiple_files = true;
 //import "google/api/annotations.proto";
 
-package org.scardiecat.styxgrpctest.pongservice.v1;
+package org.scardiecat.pongservice.v1;
 
 service PongService {
     rpc SendPing (SendPingMessageRequest) returns (PongMessage) {

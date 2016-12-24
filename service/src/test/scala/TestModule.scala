@@ -1,10 +1,10 @@
 package org.scardiecat.echo
 
-import org.scardiecat.styxgrpctest.EchoModule
+import org.scardiecat.pingpong.PongModule
 
 /**
   * Created by ralfmueller on 2016-12-11.
   */
-trait TestModule extends EchoModule{
+trait TestModule extends PongModule{
 
 }
