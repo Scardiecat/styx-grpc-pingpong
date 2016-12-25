@@ -1,0 +1,10 @@
+machine:
+  services:
+    - docker
+
+deployment:
+  hub:
+    branch: master
+    commands:
+      - docker login quay.io -u $quay_user -p $quay_pass
+      - sbt docker:publish
