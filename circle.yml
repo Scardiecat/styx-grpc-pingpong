@@ -6,5 +6,5 @@ deployment:
   hub:
     branch: master
     commands:
-      - docker login quay.io -u $quay_user -p $quay_pass
+      - ddocker login  -u $quay_user -p $quay_pass -e $quay_email quay.io
       - sbt docker:publish
