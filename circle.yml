@@ -7,4 +7,4 @@ deployment:
     branch: master
     commands:
       - docker login  -u $quay_user -p $quay_pass -e $quay_email quay.io
-      - sbt docker:publish
+      - sbt "project service" docker:publish

@@ -31,15 +31,15 @@ bintrayPackageLabels := Seq("styx", "scala", "grpc")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 
 
-val commonDockerSettings = Seq(
-  dockerBaseImage := "frolvlad/alpine-oraclejdk8",
-  dockerExposedPorts := Seq(2551),
-  maintainer in Docker := "Ralf Mueller <docker@scardiecat.org>",
-  dockerRepository := Some("magicmoose-docker-registry.bintray.io/scardiecat")
-)
+
+dockerBaseImage := "frolvlad/alpine-oraclejdk8"
+dockerExposedPorts := Seq(8443)
+maintainer in Docker := "Ralf Mueller <docker@scardiecat.org>"
+dockerRepository := Some("quay.io/scardiecat/")
 
 
-name := """styx-grpc-test-app"""
+
+name := """styx-grpc-pingpong"""
 //
 // API
 //
