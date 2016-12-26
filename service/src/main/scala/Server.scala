@@ -1,6 +1,5 @@
-package org.scardiecat.styxgrpctest
+package org.scardiecat.pingpong
 
-import org.scardiecat.pingpong.PongModule
 
 /**
   * Created by ralfmueller on 2016-12-04.

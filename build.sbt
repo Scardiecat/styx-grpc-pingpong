@@ -66,7 +66,7 @@ lazy val service = (project in file("service"))
     libraryDependencies ++= Dependencies.service,
     commonSettings,
     commonDockerSettings,
-    mainClass in (Compile)  := Some("Server")
+    mainClass in (Compile)  := Some("org.scardiecat.pingpong.Server")
   ).dependsOn(api)
 
 //Tests
