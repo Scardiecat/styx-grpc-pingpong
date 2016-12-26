@@ -8,7 +8,7 @@ val commonSettings = Seq(
     else None
   },
   git.useGitDescribe := true,
-  scalaVersion := "2.11.7",
+  scalaVersion := "2.12.1",
   scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature", "-language:existentials", "-language:higherKinds"),
 
 
@@ -65,9 +65,11 @@ lazy val service = (project in file("service"))
     name := "styx-grpc-pingpong",
     libraryDependencies ++= Dependencies.service,
     commonSettings,
-    commonDockerSettings
+    commonDockerSettings,
+    mainClass in (Compile)  := Some("Server")
   ).dependsOn(api)
 
 //Tests
 
 concurrentRestrictions in Global += Tags.limit(Tags.Test, 1)
+logBuffered in Test := false
