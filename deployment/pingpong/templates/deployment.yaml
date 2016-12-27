@@ -18,15 +18,17 @@ spec:
         ports:
         - name: grpc
           containerPort: 8443
-        - name: http
+        - name: health
           containerPort: 8080
         livenessProbe:
           httpGet:
             path: /health
-            port: http
+            port: health
+          initialDelaySeconds: 15
         readinessProbe:
           httpGet:
             path: /ready
-            port: http
+            port: health
+          initialDelaySeconds: 20
         resources:
 {{ toYaml .Values.resources | indent 12 }}
