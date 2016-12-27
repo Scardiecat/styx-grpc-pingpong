@@ -11,6 +11,7 @@ import scala.util.{Failure, Success}
 object Client extends App{
   def time(f: => Unit)={
     val s = System.currentTimeMillis
+    f
     System.currentTimeMillis - s
   }
 

@@ -25,6 +25,8 @@ object Dependencies {
   )
 
   val serviceDep = Seq(
+    "org.http4s" %% "http4s-dsl" % "0.15.0",
+    "org.http4s" %% "http4s-blaze-server" % "0.15.0"
   )
 
   val testDep = Seq(
