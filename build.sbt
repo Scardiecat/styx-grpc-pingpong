@@ -27,7 +27,7 @@ val commonSettings = Seq(
 
 val commonDockerSettings = Seq(
   dockerBaseImage := "anapsix/alpine-java:8_server-jre_unlimited",
-  dockerExposedPorts := Seq(8443),
+  dockerExposedPorts := Seq(8443,8080),
   maintainer in Docker := "Ralf Mueller <docker@scardiecat.org>",
   dockerRepository := Some("quay.io/scardiecat")
 )
