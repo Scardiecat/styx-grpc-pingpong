@@ -1,14 +1,8 @@
-# Default values for pingpong.
-replicaCount: 1
 image:
+  pullPolicy: IfNotPresent
   repository: quay.io/scardiecat/styx-grpc-pingpong
   tag: 0.0.2-6-g5759afa
-  pullPolicy: IfNotPresent
-service:
-  name: styx-grpc-pingpong
-  type: ClusterIP
-  externalGrpcPort: 8443
-  externalHealthPort: 8080
+replicaCount: 1
 resources:
   limits:
     cpu: 100m
@@ -16,4 +10,9 @@ resources:
   requests:
     cpu: 100m
     memory: 128Mi
+service:
+  externalGrpcPort: 8443
+  externalHealthPort: 8080
+  name: styx-grpc-pingpong
+  type: ClusterIP
 
