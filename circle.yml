@@ -12,3 +12,4 @@ deployment:
     commands:
       - docker login  -u $quay_user -p $quay_pass -e $quay_email quay.io
       - sbt "project service" docker:publish
+      - bash ./update_chartrepository.sh

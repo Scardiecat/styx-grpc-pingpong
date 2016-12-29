@@ -3,4 +3,6 @@ curl -fSL https://github.com/subchen/frep/releases/download/v1.1.0/frep-linux-am
 sudo unzip frep.zip -d /usr/local/bin/
 rm frep.zip
 
-curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh | bash
+curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+
+helm init --client-only
