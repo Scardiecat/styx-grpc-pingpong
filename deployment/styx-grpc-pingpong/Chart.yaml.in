@@ -1,4 +1,4 @@
 apiVersion: v1
 description: styx-grpc-pingpong chart
 name: styx-grpc-pingpong
-version: 0.0.2-6-g5759afa
+version: {{ .tag}}
