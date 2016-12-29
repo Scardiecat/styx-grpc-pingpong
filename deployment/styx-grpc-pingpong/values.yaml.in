@@ -1,0 +1,18 @@
+image:
+  pullPolicy: IfNotPresent
+  repository: quay.io/scardiecat/styx-grpc-pingpong
+  tag: {{ .tag}}
+replicaCount: 1
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+service:
+  externalGrpcPort: 8443
+  externalHealthPort: 8080
+  name: styx-grpc-pingpong
+  type: ClusterIP
+

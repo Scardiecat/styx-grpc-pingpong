@@ -2,6 +2,10 @@ machine:
   services:
     - docker
 
+dependencies:
+  pre:
+    - bash ./setup_ci.sh
+
 deployment:
   hub:
     branch: master

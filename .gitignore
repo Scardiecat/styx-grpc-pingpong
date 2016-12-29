@@ -19,6 +19,8 @@ dist
 /.sbtserver
 
 /styx-grpc-test-api
+/chartrepo
+
 
     
 native/
