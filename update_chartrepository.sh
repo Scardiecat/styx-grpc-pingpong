@@ -9,6 +9,7 @@ git clone --depth=1 -b gh-pages git@github.com:Scardiecat/styx-grpc-test-api.git
 export tag=$(git describe --tags)
 
 frep deployment/styx-grpc-pingpong/Chart.yaml.in deployment/styx-grpc-pingpong/values.yaml.in --overwrite
+helm package ./deployment/styx-grpc-pingpong/
 
 mv styx-grpc-pingpong-${tag}.tgz chartrepo/
 helm repo index chartrepo/ --merge ./chartrepo/index.yaml
