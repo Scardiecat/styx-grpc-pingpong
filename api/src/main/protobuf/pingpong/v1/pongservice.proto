@@ -2,6 +2,8 @@ syntax = "proto3";
 option java_multiple_files = true;
 //import "google/api/annotations.proto";
 
+import "dependency/v1/dependencyservice.proto";
+
 package org.scardiecat.pongservice.v1;
 
 service PongService {
@@ -9,6 +11,9 @@ service PongService {
 //        option (google.api.http) = {
 //      post: "/api/v1/echo"
 //    };
+    }
+
+    rpc SendVersion (org.scardiecat.dependency.v1.SendVersionRequest) returns (org.scardiecat.dependency.v1.SendVersionResponse) {
     }
 }
 
