@@ -22,7 +22,7 @@ helm repo index chartrepo/ --merge ./chartrepo/index.yaml
 cd chartrepo
 git add -A
 
-git commit -m "Add styx-grpc-pingpong:${semvarBuildVersion}"
+git commit -m "Add styx-grpc-pingpong:${svermakerBuildVersion}"
 
 git push
 
