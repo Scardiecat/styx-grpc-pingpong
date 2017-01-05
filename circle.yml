@@ -5,6 +5,9 @@ machine:
 dependencies:
   pre:
     - bash ./setup_ci.sh
+compile:
+  pre:
+    - bash ./make_release.sh
 
 deployment:
   hub:
