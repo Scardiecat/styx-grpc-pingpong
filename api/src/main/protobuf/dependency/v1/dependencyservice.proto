@@ -1,0 +1,26 @@
+syntax = "proto3";
+option java_multiple_files = true;
+//import "google/api/annotations.proto";
+
+package org.scardiecat.dependency.v1;
+
+/*
+rpc SendVersion (org.scardiecat.dependency.v1.SendVersionRequest) returns (org.scardiecat.dependency.v1.SendVersionResponse) {
+}
+*/
+
+message SendVersionRequest {
+}
+
+message ServiceVersion {
+    uint64 builtAtMillis = 1;
+    string name = 2;
+    string version = 3;
+    string builtAtString = 4;
+}
+
+message SendVersionResponse {
+    ServiceVersion service = 1;
+    repeated ServiceVersion dependencies = 2;
+}
+
