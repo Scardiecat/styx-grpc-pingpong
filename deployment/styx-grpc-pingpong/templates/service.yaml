@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: {{ template "fullname" . }}
   labels:
-    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    chart: "{{ .Chart.Name }}-{{ .Values.label.sverlabel }}"
     heritage: {{.Release.Service | quote }}
     release: {{.Release.Name | quote }}
 spec:
